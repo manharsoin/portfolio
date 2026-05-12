@@ -1,186 +1,166 @@
 import React from 'react';
+import { Mail, Linkedin, Github, ExternalLink, Code, Briefcase, GraduationCap, Lightbulb, Zap, Database, Globe, Copy, Award } from 'lucide-react';
 
-// Ensure Tailwind CSS is configured in your environment for these classes to work
-// You might need to install lucide-react if not already present: npm install lucide-react
-import { Mail, Linkedin, Github, ExternalLink, Code, Briefcase, GraduationCap, Lightbulb, Zap, Database, Globe, Copy } from 'lucide-react'; // Added Copy icon
-
-// Main App component
 const App = () => {
-  // Data for the portfolio, derived from your resume and GitHub README
   const personalInfo = {
     name: "Manhar Soin",
     title: "Computer Science & Computational Mathematics Student",
-    location: "University Park, PA, USA",
-    email: "msoin0208@gmail.com", // Updated email
+    location: "State College, PA, USA", 
+    email: "msoin0208@gmail.com", 
     linkedin: "https://www.linkedin.com/in/manhar-soin/",
-    github: "https://github.com/manharsoin", // Ensure this is your primary GitHub
+    github: "https://github.com/manharsoin", 
   };
 
-  const summary = "Driven Computer Science and Computational Mathematics student seeking an entry-level role to leverage strong analytical and full-stack development skills. A fast and adaptive learner, I am eager to apply my practical project experience and quickly master dynamic new technologies to solve challenging software engineering problems.";
+  const summary = "Driven Computer Science and Computational Mathematics student seeking an entry-level role to leverage strong analytical and full-stack development skills. Eager to apply practical project experience and AWS cloud expertise to solve challenging software engineering problems.";
 
-  const aboutMe = "I am a passionate software developer with expertise in full-stack development, cloud computing, and data-driven applications. I love solving real-world problems with scalable and efficient solutions and have experience in backend services, UI/UX design, and database optimization. Currently, I am focused on enhancing full-stack applications using React, Node.js, Express, and Supabase, while exploring Cloud Computing & AI-powered solutions and building scalable and efficient web applications.";
+  const aboutMe = "I am a passionate software developer with expertise in full-stack development, cloud computing, and data-driven applications. I love solving real-world problems with scalable and efficient solutions. Currently, I am focused on enhancing full-stack applications using React, Node.js, and AWS, while exploring AI-powered solutions.";
 
   const education = {
     university: "The Pennsylvania State University",
     location: "University Park, PA",
     degree: "Bachelor of Science in Computer Science and Computational Mathematics",
-    graduation: "May 2026",
-    gpa: "3.60/4.00",
-    deansList: "4/5 semesters",
+    graduation: "May 2026", 
+    gpa: "3.57/4.00", 
+    deansList: "5/7 semesters", 
     relevantCourses: [
-      "Data Structures", "Algorithms", "Discrete Mathematics", "Database Systems",
-      "Computer Architecture", "Web Development", "Numerical Analysis",
-      "Object-Oriented Programming", "Software Engineering", "Fourier Series and PDEs", "Blockchain"
+      "Data Structures", "Algorithms", "Database Systems", "Object-Oriented Programming", "Web Development"
     ],
   };
 
-  const skills = {
-    languages: ["Python", "C++", "Java", "JavaScript/TypeScript", "Dart", "SQL", "HTML/CSS"],
-    frameworksLibraries: ["React", "Next.js", "Tailwind CSS", "Node.js", "Express", "Solidity"],
-    databases: ["PostgreSQL", "MongoDB", "Supabase", "MS SQL Server"],
-  };
-
-  const academicAchievements = [
-    "Maintained 3.60 GPA and earned Dean's List recognition in 4/5 semesters in a competitive dual major program.",
-    "Contributed to research projects involving policy analytics and NLP-based index development, processing 10,000+ articles.",
-    "Developed and deployed multiple full-stack applications with active users, demonstrating strong practical skills.",
-    "Tutored 100+ students in advanced mathematics.",
-    "Designed data pipelines and algorithms that reduced manual data extraction time by 80% with 99% accuracy in research projects."
+  const certifications = [
+    {
+      name: "AWS Certified Solutions Architect - Associate (SAA-C03)", 
+      issuer: "Amazon Web Services",
+      year: "2026",
+      skills: ["S3", "CloudFront", "DynamoDB", "EC2", "VPC", "IAM"]
+    }
   ];
+
+  const skills = {
+    languages: ["Python", "Java", "SQL", "JavaScript/TypeScript", "C++"], 
+    frameworksLibraries: ["React", "Next.js", "Tailwind CSS", "Node.js", "Express", "Solidity", "FlutterFlow"],
+    databasesCloud: ["AWS (S3, CloudFront, DynamoDB)", "PostgreSQL", "MongoDB", "Supabase", "Firebase", "MS SQL Server"]
+  };
 
   const experience = [
     {
-      title: "Software Development Intern",
+      title: "Senior Capstone - ShareMyBook (Live)", 
+      company: "Full-Stack Developer & UI/UX Designer",
+      location: "University Park, PA",
+      dates: "Aug 2025 - Dec 2025",
+      link: "https://share-my-book.vercel.app/", // Added link
+      description: [
+        "Built a community book-sharing platform serving 38+ users with 29 books and 17 completed returns.",
+        "Owned end-to-end product delivery, including the full request lifecycle from request terms to review.",
+        "Built RESTful APIs with Node.js + TypeScript to support a responsive React UI and Firebase Auth.",
+        "Modeled MongoDB schemas for users, books, requests, and messaging across 5 book clubs."
+      ]
+    },
+    {
+      title: "Research Assistant - Policy Analytics & Data Engineering", 
+      company: "Smeal College of Business, Penn State University",
+      location: "University Park, PA",
+      dates: "May 2025 - Dec 2025",
+      description: [
+        "Built scalable Python data pipelines processing 10,000+ articles using ProQuest SRU & AWN APIs.",
+        "Constructed policy indices following Baker et al. (2022) methodology with robust logging.",
+        "Improved data quality by implementing validation, deduplication, and failure-recovery patterns."
+      ]
+    },
+    {
+      title: "Software Development Intern", 
       company: "Samura Technologies Private Limited",
       location: "Bengaluru, India",
       dates: "May 2024 – Aug 2024",
       description: [
-        "Revamped UI with FlutterFlow, improving navigation speed and visual consistency across 15+ screens.",
-        "Integrated Supabase backend, reducing load times by 30% for 1,000+ active users.",
-        "Incorporated 5+ user-requested features after direct feedback sessions, achieving 95% user satisfaction rating.",
-        "Applied scalable design principles to improve long-term maintainability."
+        "Redesigned product UI across 15+ screens with FlutterFlow, improving usability and consistency.",
+        "Integrated Supabase backend services and shipped 5+ user-requested features to production.",
+        "Wrote automated tests that reduced regressions and contributed to a 20% reduction in reported bugs."
       ]
     },
     {
-      title: "Research Assistant – Policy Analytics & NLP",
-      company: "Smeal College of Business, Penn State University",
-      location: "University Park, PA",
-      dates: "May 2025 – Present",
-      description: [
-        "Processed 10K+ articles using ProQuest SRU & AWN to build policy indices.",
-        "Parsed structured Excel keyword sets across 4 categories.",
-        "Constructed National, Local, and Combined indices per Baker et al. (2022) methodology.",
-        "Built checkpointed pipelines with automated query + export logic."
-      ]
-    },
-    {
-      title: "Tutor & Learning Assistant",
+      title: "Tutor & Learning Assistant", 
       company: "Eberly College of Science, Penn State University",
       location: "University Park, PA",
       dates: "Jan 2024 – Present",
       description: [
-        "Provided weekly tutoring to 100+ students in Calculus I/II and Differential Equations.",
-        "Conducted bi-weekly review sessions, boosting average exam scores by 15% and improving pass rates by 20%."
-      ]
-    },
-    {
-      title: "Applied Researcher – Pulsar Signal Detection",
-      company: "Pulsar Club, Penn State University",
-      location: "University Park, PA",
-      dates: "Jan 2023 – May 2023",
-      description: [
-        "Processed raw radio telescope data in Python to detect periodic pulsar signals, identifying 12+ potential candidates.",
-        "Developed signal processing algorithms achieving 85% accuracy in pulsar detection."
+        "Tutored 100+ students in Calculus I/II and Differential Equations.",
+        "Improved average exam performance by 15% through structured practice and targeted feedback."
       ]
     }
   ];
 
   const projects = [
     {
-      name: "EduFund",
+      name: "EduFund (Live)",
       description: "A decentralized crowdfunding platform built using Ethereum smart contracts.",
-      techStack: ["Blockchain", "Solidity", "MetaMask", "React"],
+      techStack: ["Solidity", "Ethereum", "MetaMask", "React"], 
       liveLink: "https://edu-fund-bay.vercel.app/",
       githubLink: "https://github.com/manharsoin/edufund",
       features: [
         "Built decentralized crowdfunding platform using Ethereum smart contracts with secure donation processing.",
-        "Integrated MetaMask wallet for user authentication and transaction signing.",
-        "Implemented tamper-proof donation tracking logic ensuring 100% transaction transparency."
+        "Integrated MetaMask wallet for user authentication and transaction signing."
       ]
     },
     {
       name: "EverythingCar",
-      description: "A full-stack platform for car buying and selling with real-time listings and user reviews.",
-      techStack: ["Next.js", "Firebase", "Styled Components", "Node.js", "Stripe API", "YouTube API"], // Added YouTube API
+      description: "A full-stack platform for car buying and selling with real-time listings.",
+      techStack: ["Next.js", "Firebase", "Node.js", "Stripe API", "YouTube API"],
       liveLink: "https://everythingcar.vercel.app/",
       githubLink: "https://github.com/manharsoin/EverythingCar",
       features: [
-        "Developed a car search and review platform allowing users to find vehicles by make/model and engage with content.",
-        "Implemented a responsive React/Next.js frontend with dynamic car search functionality and detailed car displays.",
-        "Integrated YouTube API to fetch and display car video reviews, enhancing user access to multimedia content.",
-        "Designed and implemented user review functionality, enabling community-driven car feedback.",
-        "Successfully deployed and maintained the full-stack application on Vercel, ensuring high availability and performance."
+        "Implemented a responsive React/Next.js frontend with dynamic car search functionality.",
+        "Integrated YouTube API to fetch and display car video reviews."
       ]
     },
     {
       name: "Subspace – Real Estate Platform",
-      description: "A full-stack platform for apartment subleasing with features like geolocation, Stripe payments, live chat, and secure encryption.",
-      techStack: ["React", "Node.js", "Supabase", "Stripe API"],
+      description: "A full-stack platform for apartment subleasing across multiple campuses.",
+      techStack: ["React", "Node.js", "Supabase", "Stripe API"], 
       liveLink: "https://www.sub-space.me/",
-      githubLink: "https://github.com/mantavya0807/homeharmony-platform", // Ensure this is the correct repo
+      githubLink: "https://github.com/mantavya0807/homeharmony-platform",
       features: [
-        "Developed apartment subleasing platform serving 500+ active users across 3 campuses with 95% user retention rate.",
-        "Built responsive React UI and Node.js + Supabase backend with geolocation, real-time chat, and review system.",
-        "Implemented secure Stripe payments with encrypted data storage and fraud protection."
+        "Developed apartment subleasing platform with a fast, responsive React UI.",
+        "Implemented secure Stripe payments with server-side validation."
       ]
     },
     {
       name: "Penn State Meal Plan Optimizer – Mealer",
-      description: "A web application that helps Penn State students analyze and optimize their campus meal plan spending through automated data collection, real-time analytics, and personalized recommendations.",
-      techStack: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Firebase Authentication", "Firebase Cloud Functions", "Firestore Database", "Node.js", "Puppeteer"],
-      liveLink: null, // "Coming Soon" from GitHub README
-      githubLink: "https://github.com/mantavya0807/Mealer", // Ensure this is the correct repo
+      description: "Analytics dashboard to optimize meal plan usage through automated data collection.",
+      techStack: ["React", "TypeScript", "Tailwind", "Puppeteer", "Node.js"], 
+      githubLink: "https://github.com/mantavya0807/Mealer",
       features: [
-        "Optimized student meal plan usage through analytics and dining data scraping.",
-        "Automated Penn State dining data collection with Puppeteer, processing 10,000+ data points daily.",
-        "Built Recharts dashboard for usage visualization with 15+ interactive components.",
-        "Multi-User Comparison: Compare spending patterns with other users.",
-        "Discount Analysis: Track savings and identify opportunities for better value."
+        "Automated dining data collection with Puppeteer, capturing 500+ daily records.",
+        "Built Recharts dashboard for usage visualization with 15+ interactive components."
       ]
     },
     {
       name: "Agricultural Requirements Tracker",
-      description: "A crop recommendation system that analyzes location, soil type, and budget to provide the best crop suggestions.",
+      description: "A crop recommendation system that analyzes location and soil type.",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
-      liveLink: null,
-      githubLink: "https://github.com/mantavya0807/demo", // Ensure this is the correct repo
-      features: [] // No specific features listed in GitHub README, can add if you have them
+      githubLink: "https://github.com/mantavya0807/demo",
+      features: ["Analyzes location, soil type, and budget to provide best crop suggestions."]
     },
     {
       name: "Course Scheduler",
-      description: "A MERN-based scheduling tool that helps students generate optimized course schedules based on majors, minors, and prerequisites.",
+      description: "MERN-based tool that helps students generate optimized course schedules.",
       techStack: ["MERN Stack", "PostgreSQL", "Prisma ORM"],
-      liveLink: null,
-      githubLink: "https://github.com/mantavya0807/CourseCrafter", // Ensure this is the correct repo
-      features: [] // No specific features listed in GitHub README, can add if you have them
+      githubLink: "https://github.com/mantavya0807/CourseCrafter",
+      features: ["Optimizes schedules based on majors, minors, and prerequisites."]
     }
   ];
 
-  // Helper function to copy email to clipboard
   const copyEmailToClipboard = () => {
-    document.execCommand('copy'); // Use execCommand for broader compatibility in iframes
-    // You could add a temporary visual feedback here, e.g., a tooltip "Copied!"
-    alert("Email copied to clipboard!"); // Using alert for simplicity, but a custom modal is better in a real app
+    navigator.clipboard.writeText(personalInfo.email);
+    alert("Email copied to clipboard!");
   };
 
-  // Helper component for skill badges
   const SkillBadge = ({ skill }) => (
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
       {skill}
     </span>
   );
 
-  // Helper component for project cards
   const ProjectCard = ({ project }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 mb-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <h3 className="text-xl font-bold text-gray-800 mb-2">{project.name}</h3>
@@ -212,101 +192,108 @@ const App = () => {
     </div>
   );
 
-
   return (
     <div className="font-inter bg-gray-50 text-gray-800">
-      {/* Navbar */}
       <nav className="bg-white shadow-md p-4 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors duration-200">Manhar Soin</a>
-          <div className="space-x-4 hidden md:flex">
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">About</a>
-            <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">Skills</a>
-            <a href="#experience" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">Experience</a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">Projects</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
+          <a href="#home" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">Manhar Soin</a>
+          <div className="space-x-4 hidden md:flex font-medium">
+            <a href="#about" className="text-gray-700 hover:text-blue-600">About</a>
+            <a href="#certifications" className="text-gray-700 hover:text-blue-600">Certifications</a>
+            <a href="#skills" className="text-gray-700 hover:text-blue-600">Skills</a>
+            <a href="#experience" className="text-gray-700 hover:text-blue-600">Experience</a>
+            <a href="#projects" className="text-gray-700 hover:text-blue-600">Projects</a>
           </div>
         </div>
       </nav>
 
       <main className="max-w-6xl mx-auto p-6">
-        {/* Hero Section */}
         <section id="home" className="py-20 text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-xl mb-12">
-          <h1 className="text-5xl font-extrabold mb-4 animate-fade-in-down">Hi, I'm Manhar Soin!</h1>
-          <p className="text-2xl font-light mb-6 animate-fade-in-up">{personalInfo.title}</p>
-          <p className="text-lg mb-8 max-w-2xl mx-auto animate-fade-in-up">{summary}</p>
-          <div className="flex justify-center space-x-6 animate-fade-in-up">
-            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-lg hover:bg-blue-50 transition-all duration-300">
+          <h1 className="text-5xl font-extrabold mb-4">Hi, I'm Manhar Soin!</h1>
+          <p className="text-2xl font-light mb-6">{personalInfo.title}</p>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">{summary}</p>
+          <div className="flex justify-center space-x-6">
+            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-lg hover:bg-blue-50 transition-all">
               <Linkedin size={20} className="mr-2" /> LinkedIn
             </a>
-            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300">
+            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-all">
               <Github size={20} className="mr-2" /> GitHub
             </a>
           </div>
         </section>
 
-        {/* About Me Section */}
         <section id="about" className="py-16">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">About Me</h2>
           <div className="bg-white rounded-lg shadow-lg p-8 text-lg leading-relaxed text-gray-700">
             <p className="mb-4">{aboutMe}</p>
-            <p className="mb-4">My dual major in Computer Science and Computational Mathematics provides a unique blend of theoretical understanding and practical application, enabling me to tackle complex problems from multiple perspectives.</p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-6">Education</h3>
             <div className="border-l-4 border-blue-500 pl-4">
-              <p className="font-semibold text-gray-800">{education.university} - {education.location}</p>
+              <p className="font-semibold text-gray-800">{education.university}</p>
               <p className="text-gray-600">{education.degree} ({education.graduation})</p>
               <p className="text-gray-600">GPA: {education.gpa} | Dean's List: {education.deansList}</p>
-              <p className="text-gray-600 mt-2">Relevant Courses: {education.relevantCourses.join(', ')}</p>
+              <p className="text-gray-600 mt-2 text-sm italic">Relevant Courses: {education.relevantCourses.join(', ')}</p>
             </div>
           </div>
         </section>
 
-        {/* Skills Section */}
+        <section id="certifications" className="py-16 mb-12">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">Certifications</h2>
+          <div className="grid grid-cols-1 gap-6">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-gradient-to-r from-orange-50 to-white border border-orange-200 rounded-lg p-8 shadow-md flex items-center">
+                <div className="bg-orange-500 p-4 rounded-full text-white mr-6">
+                  <Award size={32} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-800">{cert.name}</h3>
+                  <p className="text-orange-700 font-semibold">{cert.issuer} • {cert.year}</p>
+                  <div className="flex flex-wrap mt-2">
+                    {cert.skills.map(s => <span key={s} className="bg-white border border-orange-100 px-2 py-1 rounded text-xs font-bold text-orange-600 mr-2 mb-2">{s}</span>)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section id="skills" className="py-16 bg-gray-100 rounded-lg shadow-inner mb-12">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center"><Code size={24} className="mr-2 text-blue-500" /> Programming Languages</h3>
-              <div className="flex flex-wrap">
-                {skills.languages.map((skill, index) => (
-                  <SkillBadge key={index} skill={skill} />
-                ))}
-              </div>
+              <h3 className="text-xl font-semibold mb-4 flex items-center"><Code size={24} className="mr-2 text-blue-500" /> Programming</h3>
+              <div className="flex flex-wrap">{skills.languages.map(s => <SkillBadge key={s} skill={s} />)}</div>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center"><Lightbulb size={24} className="mr-2 text-blue-500" /> Frameworks & Libraries</h3>
-              <div className="flex flex-wrap">
-                {skills.frameworksLibraries.map((skill, index) => (
-                  <SkillBadge key={index} skill={skill} />
-                ))}
-              </div>
+              <h3 className="text-xl font-semibold mb-4 flex items-center"><Lightbulb size={24} className="mr-2 text-blue-500" /> Frameworks</h3>
+              <div className="flex flex-wrap">{skills.frameworksLibraries.map(s => <SkillBadge key={s} skill={s} />)}</div>
             </div>
-            {/* Removed Tools & Platforms section */}
-            <div className="bg-white rounded-lg shadow-md p-6 col-span-1 md:col-span-2 lg:col-span-1"> {/* Adjusted col-span for layout */}
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center"><Database size={24} className="mr-2 text-blue-500" /> Databases</h3>
-              <div className="flex flex-wrap">
-                {skills.databases.map((skill, index) => (
-                  <SkillBadge key={index} skill={skill} />
-                ))}
-              </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-4 flex items-center"><Database size={24} className="mr-2 text-blue-500" /> Cloud & DB</h3>
+              <div className="flex flex-wrap">{skills.databasesCloud.map(s => <SkillBadge key={s} skill={s} />)}</div>
             </div>
           </div>
         </section>
 
-        {/* Experience Section */}
         <section id="experience" className="py-16">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">Experience</h2>
           <div className="space-y-10">
             {experience.map((job, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-[1.01] hover:shadow-xl">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-[1.01]">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
+                    <div className="flex items-center">
+                      <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
+                      {job.link && (
+                        <a href={job.link} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                          <ExternalLink size={18} />
+                        </a>
+                      )}
+                    </div>
                     <p className="text-blue-600 font-semibold">{job.company}</p>
                   </div>
-                  <div className="text-right">
-                    <p className="text-gray-600 text-sm">{job.dates}</p>
-                    <p className="text-gray-600 text-sm">{job.location}</p>
+                  <div className="text-right text-gray-600 text-sm">
+                    <p>{job.dates}</p>
+                    <p>{job.location}</p>
                   </div>
                 </div>
                 <ul className="list-disc list-inside text-gray-700 leading-relaxed pl-4">
@@ -319,58 +306,33 @@ const App = () => {
           </div>
         </section>
 
-        {/* Academic & Technical Achievements Section */}
-        <section id="achievements" className="py-16 bg-gray-100 rounded-lg shadow-inner mb-12">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">Academic & Technical Achievements</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-3 pl-4 text-lg">
-            {academicAchievements.map((achievement, index) => (
-              <li key={index}>{achievement}</li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Projects Section */}
         <section id="projects" className="py-16">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 border-b-4 border-blue-500 pb-2 inline-block">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-16 text-center bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg shadow-xl mt-12">
           <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
-          <p className="text-lg mb-4 max-w-2xl mx-auto">
-            I'm always open to new opportunities and collaborations. Feel free to reach out!
-          </p>
-          {/* Display email directly and add copy button */}
-          <div className="flex flex-col items-center mb-6">
-            <p className="text-xl font-semibold mb-2">{personalInfo.email}</p>
-            <button
-              onClick={copyEmailToClipboard}
-              className="flex items-center bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              <Copy size={20} className="mr-2" /> Copy Email
-            </button>
-            {/* Hidden input for copying to clipboard */}
-            <input type="text" value={personalInfo.email} readOnly style={{ position: 'absolute', left: '-9999px' }} id="emailToCopy" />
-          </div>
-
+          <p className="text-xl font-semibold mb-6">{personalInfo.email}</p>
+          <button onClick={copyEmailToClipboard} className="bg-white text-gray-800 px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-all font-bold flex items-center mx-auto mb-8">
+            <Copy size={20} className="mr-2" /> Copy Email
+          </button>
           <div className="flex justify-center space-x-6">
-            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-lg hover:bg-blue-50 transition-all duration-300">
-              <Linkedin size={20} className="mr-2" /> LinkedIn
+            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+              <Linkedin size={32} />
             </a>
-            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300">
-              <Github size={20} className="mr-2" /> GitHub
+            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+              <Github size={32} />
             </a>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center p-4 mt-12">
+      <footer className="bg-gray-800 text-white text-center p-6 mt-12">
         <p>&copy; {new Date().getFullYear()} Manhar Soin. All rights reserved.</p>
       </footer>
     </div>
